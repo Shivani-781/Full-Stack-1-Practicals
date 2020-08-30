@@ -8,150 +8,133 @@
         * {
             margin: 0;
             padding: 0;
-            
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
         }
 
         .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
             border: solid;
             border-color: rgb(240, 240, 240);
             box-shadow: 0px 0px 1px 1px rgb(172, 172, 172);
-            border-width: 10px;
-            margin: 20px auto;
+            border-width: 5px;
             padding: 10px;
-            width: 1200px;
-            
         }
 
         .header {
             background-color: tomato;
-            height: 70px;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
+            height: 70px;
             position: sticky;
             top: 0;
             z-index: 10;
+
         }
 
-        .header ul {
+        .header .menu {
             list-style: none;
+            float: right;
+            padding: 0px 30px;
+            
         }
 
         .header ul li {
+            
             display: inline-block;
+            line-height: 70px;
+            
+
         }
 
         .header ul li a {
-            display: block;
-            text-align: center;
-            font-weight: bold;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            font-size: 30px;
             text-decoration: none;
+            font-weight: bold;
             text-transform: uppercase;
-            padding: 10px 40px;
+            color:rgb(255, 255, 255);
+            padding: 5px 52px;
+            font-size: 25px;
+            transition: .4s;
+
+            
         }
 
         .header ul li a:hover {
-            background-color: rgb(255, 161, 145);
+            
             color: black;
+            background-color: rgb(255, 161, 145);
         }
 
-        .footer {
+        .sec5 .footer {
             background-color: tomato;
             color: white;
-            
             width: 100%;
             text-align: center;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            font-family: Arial, Helvetica, sans-serif;
-            /* font-size: 30px; */
-            margin-top: 40px;
             padding: 20px 0px;
         }
 
         #head {
             text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 40px;
-            margin-top: 120px;
-        }
-
-        #head2 {
-            visibility: hidden;
-            /* margin-top: 70px; */
-        }
-
-        .banner h1 {
-            text-align: left;
-            font-family: Arial, Helvetica, sans-serif;
-            position: relative;
-            top: 65px;
-            left: 55px;
-            z-index: 5;
-            color: white;
-            font-size: 60px;
-            position: absolute;
-        }
-
-        .banner img {
-            z-index: 1;
-            height: 90vh;
-            width: 100%;
-        }
-
-        .banner {
-            background-color: lightskyblue;
-            height: 90vh;
-            width: 100%;
-            /* margin-bottom: 100px; */
-            position: relative;
+            margin: 40px 0px;
         }
 
         .sec1 {
-            margin-left: 20px;
-            margin-right: 10px;
-            margin-top: 50px;
+            width: 100%;
+            height: 560px;
+            margin-top: 20px;
+            background-image: url(../img/Home_8.jpg);
+            background-size: cover;
+            background-position: center;
+
         }
 
-        .cir {
-            background-color: rgb(144, 255, 80);
-            height: 260px;
-            width: 22%;
-            border-radius: 200px;
-            margin: 15px;
-            float: left;
-            margin-bottom: 80px;
-            
+        .sec1 h1 {
+            color: white;
+            text-align: left;
+            padding: 40px 45px;
+            font-size: 60px;
+        }
+
+        /* .sec2 {
+            width: 100%;
+        } */
+
+        .sec2::after {
+            content: '';
+            display: block;
+            clear: both;
         }
 
         .cir img {
-            height: 260px;
-            width: 100%;
-            border-radius: 200px;
-            /* margin: 15px; */
-            /* float: left; */
-            /* margin-bottom: 120px; */
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            margin-left: 35px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
+        }
+
+        .sec3::after {
+            content: '';
+            display: block;
+            clear: both;
         }
 
         .left-bar {
             background-color:coral;
             color: white;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            font-family: Arial, Helvetica, sans-serif;
-            /* font-size: 30px; */
-            /* margin-bottom: 70px; */
-            margin-top: 40px;
-            width: 49%;
-            height: 450px;
+            width: 50%;
+            height: 470px;
             float: left;
             padding: 10px;
         }
@@ -166,37 +149,23 @@
             text-align: center;
             padding-top: 10px;
         }
+
         .right-bar {
             height: 450px;
             width: 48%;
-            margin-top: 40px;
+            /* margin-top: 40px; */
             /* margin-bottom: 70px; */
             float: right;
-        }
-
-        #head1 {
-            text-align: center;
-            visibility: hidden;
         }
 
         .art {
             width: 100%;
             height: 150px;
             margin-bottom: 10px;
-            /* background-color: lightsalmon; */
-            color: black;
             position: relative;
-            /* display: flex;
-            justify-content: center;
-            align-items: center; */
-            /* font-family: Arial, Helvetica, sans-serif; */
-            /* font-size: 30px; */
         }
 
         .art h2 {
-            font-family: Arial, Helvetica, sans-serif;
-            /* padding-top: 5px; */
-            /* text-align: right; */
             position: absolute;
             top: 5px;
             right: 10px;
@@ -207,25 +176,32 @@
             height: 150px;
         }
 
-        .sec3 {
-            margin-left: 10px;
-            margin-right: 0px;
-            margin-top: 50px;
+        .sec4 {
+            margin: 15px auto;
+            width: 100%;
+        }
+
+        .sec4::after {
+            content: '';
+            display: block;
+            clear: both;
         }
 
         .box {
-            background-color: tomato;
+            background-color: rgb(255, 135, 113);
             color: white;
             height: 350px;
             width: 22%;
             margin: 15px;
             float: left;
-            margin-bottom: 150px;
+            margin-bottom: 50px;
+            border-radius: 8px;
         }
 
         .box img {
             width: 100%;
-            height: 40%;
+            height: 45%;
+            padding: 10px;
             /* border-radius: 7px; */
         }
         .box h4 {
@@ -256,65 +232,67 @@
             color: black;
             font-weight: bold;
         }
-    </style>
 
+
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <ul>
-                <li><a href="#home">Home</a></li>
+            
+            <ul class="menu">
+                <li><a href="#top">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#technologies">Technologies</a></li>
                 <li><a href="#contact">Contact</a></li>
+                
             </ul>
-        </div>
-        <a name="home">
-            <h1 id="head2">Home</h1>
-        </a>
-        <div class="banner" >
-            <h1>PRACTICAL - 8</h1>
-            <img src="../img/Home_8.jpg" alt="Practical-8">
-        </div>
-        <a name="team"></a>
-        <h1 id="head">Team Members</h1>
-        <div class="sec1">
-            <div class="cir"><img src="../img/Team_1.png" alt="Member-1"></div>
-            <div class="cir"><img src="../img/Team_2.png" alt="Member-2"></div>
-            <div class="cir"><img src="../img/Team_3.png" alt="Member-3"></div>
-            <div class="cir"><img src="../img/Team_4.png" alt="Member-4"></div>
-        </div>
-        <br><br><br><br><br><br><br><br>
-        
-        <a name="about"><h1 id="head">About Us</h1></a>
-        <div class="sec2">
             
+        </div>
+
+        <a name="top"></a>
+        <div class="sec1">
+            <h1>Practical-8</h1>
+        </div>
+
+        <a name="team"></a>
+        <div class="sec2">
+            <h1 id="head">Team Members</h1>
+            <div class="cir"><img src="../img/Team_1.png" alt="1"></div>
+            <div class="cir"><img src="../img/Team_2.png" alt="2"></div>
+            <div class="cir"><img src="../img/Team_3.png" alt="3"></div>
+            <div class="cir"><img src="../img/Team_4.png" alt="4"></div>
+        </div>
+
+        <a name="about"></a>
+        <div class="sec3">
+            <h1 id="head">About Us</h1>
             <div class="left-bar">
                 <h2>About Projects</h2>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, Esse sequi quisquam ipsa quasi iure aliquid sint ullam, ipsam a, alias maiores officia incidunt temporibus aut magni soluta culpa dicta. Consequuntur corrupti molestias corporis alias fugiat expedita illo, consectetur suscipit earum. Non deleniti delectus amet, nobis voluptate debitis dicta unde aut voluptatibus provident qui voluptates cupiditate maxime. Maiores repellendus adipisci, dicta esse, sequi labore quibusdam rerum suscipit modi iusto dolore ipsam ducimus illo aspernatur molestiae distinctio explicabo quisquam nihil reprehenderit! Fugit quia omnis minima laudantium, magni et. Id, enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus architecto voluptatem labore dolorum eos eveniet expedita. Cum, magnam in. Iure blanditiis rem magni, eaque animi quidem pariatur impedit aperiam placeat ratione voluptate maiores ullam labore minima, inventore accusantium amet id dolor. Quia, ad! Voluptatem ipsa mollitia quis excepturi vero. Neque sint dolores expedita aperiam deleniti, veritatis minima incidunt tenetur repellendus harum! Molestias, magni enim. Dolore ut amet beatae ullam ipsum suscipit unde officia, est harum distinctio voluptate quasi nulla aperiam explicabo? Fuga voluptatibus suscipit, aperiam rem ullam doloremque ipsa explicabo, quidem assumenda natus dolore veritatis non. Amet nobis corporis dolorum?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, Esse sequi quisquam, Consequuntur Esse sequi quisquam, Consequuntur corrupti molestias corporis alias fugiat expedita illo, consectetur suscipit earum. Non deleniti delectus amet, nobis voluptate debitis dicta unde aut voluptatibus provident qui voluptates cupiditate maxime. Maiores repellendus adipisci, dicta esse, sequi labore quibusdam rerum suscipit modi iusto dolore ipsam ducimus illo aspernatur molestiae distinctio explicabo quisquam nihil reprehenderit! Fugit quia omnis minima laudantium, magni et. Id, enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus architecto voluptatem labore dolorum eos eveniet expedita. Cum, magnam in. Iure blanditiis rem magni, eaque animi quidem pariatur impedit aperiam placeat ratione voluptate maiores ullam labore minima, inventore accusantium amet id dolor. Quia, ad! Voluptatem ipsa mollitia quis excepturi vero. Neque sint dolores expedita aperiam deleniti, veritatis minima incidunt tenetur repellendus harum! Molestias, magni enim. Dolore ut amet beatae ullam ipsum suscipit unde officia, est harum distinctio voluptate quasi nulla aperiam explicabo? Fuga voluptatibus suscipit, aperiam rem ullam doloremque ipsa explicabo, quidem assumenda natus dolore veritatis non. Amet nobis corporis dolorum?</p>
+            
             </div>
             <div class="right-bar">
                 <div class="art">
                     <h2>Project-1</h2>
-                    <img src="../img/Proj_1.jpg" alt="Project-1">
+                    <img src="../img/Proj_1.jpg" alt="1">
                 </div>
                 <div class="art">
                     <h2>Project-2</h2>
-                    <img src="../img/Proj_2.jpeg" alt="Project-2">
+                    <img src="../img/Proj_2.jpeg" alt="2">
                 </div>
                 <div class="art">
                     <h2>Project-3</h2>
-                    <img src="../img/Proj_3.jpg" alt="Project-3">
+                    <img src="../img/Proj_3.jpg" alt="3">
                 </div>
             </div>
         </div>
-        <h1 id="head1">Hide</h1>
+
         <a name="technologies"></a>
-        <h1 id='head'>Technologies Used</h1>
-        <div class="sec3">
-            
+        <div class="sec4">
+            <h1 id="head">Technologies Used</h1>
             <div class="box">
                 <img src="../img/HTML.png" alt="Introduction to HTML">
                 <h4>Introduction to HTML</h4>
@@ -346,16 +324,16 @@
                 <a href="Practical5-bs.html" target="_blank">Read More</a>
             </div>
         </div>
-        
-        <a name="contact"><h1 id="head">Contact</h1></a>
-        <div class="sec4">
+
+        <a name="contact"></a>
+        <div class="sec5">
+            <h1 id="head">Contact</h1>
             <div class="footer">
                 <h3>Website Template for Practical-8 &copy; <a href="https://www.linkedin.com/in/shivanichauhan781/">Shivani</a></h3>
                 <br>
                 <h4><a href="#">Back to top</a></h4>
             </div>
         </div>
-
     </div>
 </body>
 </html>
