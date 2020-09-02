@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-10</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+             width: 100%;
+             height: 70px;
+             background-color: #2C3A47;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             position: fixed;
+
+        }
+
+        .header img {
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            line-height: 70px;
+            color: white;
+            text-transform: uppercase;
+            /* padding: 20px; */
+        }
+
+        .content {
+            width: 100%;
+            padding: 20px;
+            float: right;
+            transition: .7s;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 700px;
+            display: block;
+            margin: auto;
+            /* border-radius: 2%; */
+            padding-top: 70px;
+        }
+
+        .content p {
+            text-align: justify;
+            padding: 30px;
+        }
+
+        .sidebar {
+            width: 20%;
+            height: 100%;
+            position: fixed;
+            top: 70px;
+            background-color: #353b48;
+            left: -100%;
+            transition: .7s;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            font-size: 25px;
+            display: block;
+            color: white;
+            padding: 20px;
+            transition: .4s;
+        }
+
+        a span {
+            margin-left: 12px;
+        }
+
+        .sidebar ul li a:hover {
+            border-left: 10px solid white;
+            
+        }
+
+        .social {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 15px 20px;
+            margin-top: 50px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+            border-top: 2px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social a i {
+            color: white;
+            font-size: 35px;
+                                
+        }
+
+        .social a i:hover {
+            color: rgb(0, 167, 167);
+        }
+
+        .show-btn, .hide-btn {
+            font-size: 30px;
+            color: white;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        .show-btn:hover, .hide-btn:hover {
+            color: rgb(0, 167, 167);
+        }
+
+        .hide-btn {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #chk:checked ~ .sidebar {
+            left: 0;
+        }
+
+        #chk:checked ~ .show-btn {
+            opacity: 0;
+        }
+        #chk:checked ~ .hide-btn {
+            opacity: 1;
+            visibility: visible;
+        }
+        #chk:checked ~ .content {
+            width: 80%;
+        }
+        #chk {
+            visibility: hidden;
+        }
+
+        @media (max-width: 1000px) {
+            .sidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .header h1 {
+                display: none;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="../img/FS_logo.png" alt="Logo">
+        <h1>Full Stack</h1>
+    </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+        <div class="social">
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-youtube-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        
+    </div>
+    <div class="content">
+        <img src="../img/Laptop.jpg" alt="Home">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus et laborum voluptates, aliquam aliquid sunt quisquam iure non aut dolor ullam eius accusantium! Ratione id culpa numquam vitae quisquam! Delectus sapiente provident corporis tempore nulla temporibus a quae eaque similique perferendis dolorum, blanditiis voluptate earum facilis illo veniam distinctio recusandae dolor et tenetur rem, expedita, sed aliquid. Sunt necessitatibus laboriosam consequatur debitis, nam architecto modi omnis ipsum rem excepturi impedit ipsa natus voluptas dicta porro non recusandae aperiam voluptatibus cupiditate qui inventore nulla voluptatem! Cupiditate sit dolores id officia voluptatem obcaecati dignissimos rem autem atque eum dolorem eius neque odit voluptate aperiam asperiores nesciunt sint nobis, vero tempora totam. Iste praesentium libero sunt tenetur, quae placeat obcaecati error animi neque earum reprehenderit. Nihil, sed corporis quia dolores quasi praesentium sapiente totam labore aut architecto deleniti dolore nulla id culpa ratione rem veniam porro accusamus laboriosam sequi! Sed, maxime soluta sint quia nemo nihil aspernatur maiores sequi quas id aliquid pariatur, qui consequatur mollitia nam incidunt cumque vitae officia sunt neque quis excepturi? Consectetur maxime sunt, at excepturi earum nesciunt dolores nam, vitae quisquam placeat recusandae, vel doloremque eos fuga! Qui, eius nisi reiciendis non dicta amet officiis illum quaerat est iure maxime provident laboriosam quibusdam. Eius eaque, vitae ipsam magnam illo consequuntur ipsa in delectus repellat. Nesciunt perspiciatis voluptate eos amet quas quos repellat voluptatibus nostrum eveniet nihil itaque deserunt consequatur enim, officiis tempore quis quaerat magnam adipisci quibusdam facere mollitia eius. Sit ab doloribus esse sed, eligendi ratione veritatis quasi quisquam quam modi. Fugiat porro eos tempora amet pariatur? Error exercitationem aspernatur neque repellendus nobis porro. Quia illo tempora doloremque nulla ipsam ullam asperiores iure maiores hic eius amet non unde quibusdam cum eveniet, commodi magni accusantium! Ut dignissimos reiciendis iusto aliquid molestias architecto. Iste eaque sit doloremque minima, dolore quidem accusamus impedit voluptatibus sunt quas vero fuga, odio quis nulla. Nihil quia aspernatur quas obcaecati voluptatum maiores, facere, eligendi blanditiis laboriosam sequi enim est corrupti nulla delectus quidem sit nemo aut laudantium recusandae impedit molestiae provident voluptate nostrum similique? Repellat distinctio libero molestias obcaecati facere sunt assumenda exercitationem reiciendis ab fugit, voluptatem quaerat sequi consectetur dolorum voluptas odio tempora deserunt quas sit aliquid fugiat veritatis! Maiores aspernatur, alias similique veniam quasi enim unde repellendus harum quo doloribus sunt, porro vitae architecto quaerat voluptas asperiores fugit nihil sequi culpa quibusdam? Ipsa nam rem explicabo, illum quis asperiores, alias porro commodi corporis a excepturi nostrum, quae quia beatae quisquam repellendus velit. Rem nam magnam incidunt nihil nisi nostrum saepe cum, sequi exercitationem omnis reiciendis nemo quas vero atque? Natus distinctio laborum ea fugit aspernatur facilis. Quaerat aut laboriosam recusandae, eius earum sunt nam nobis. Blanditiis at rerum odio, eligendi aliquam ratione. Maiores eaque commodi necessitatibus maxime, officiis alias enim non tenetur dolorem fugit, eum accusamus repellat reprehenderit. Magnam iste ex nemo mollitia cumque ipsum eaque. Est fugiat consequuntur explicabo veniam itaque, asperiores ipsam exercitationem ducimus, minima rem debitis architecto eaque iste saepe earum doloribus nam? Nostrum libero voluptatum quaerat deleniti?</p>
+
+    </div>
+    
+</body>
+</html>
